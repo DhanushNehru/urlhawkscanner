@@ -1,5 +1,5 @@
 <h1 align="center">
-  URLHawk 🦅
+  URLHawkScan 🦅
 </h1>
 
 <p align="center">
@@ -34,15 +34,15 @@ Ensure you have [Go](https://go.dev/dl/) installed on your system.
 
 ### Build From Source
 ```bash
-git clone https://github.com/DhanushNehru/urlhawk.git
-cd urlhawk
-go build -o urlhawk
-sudo mv urlhawk /usr/local/bin/
+git clone https://github.com/DhanushNehru/urlhawkscan.git
+cd urlhawkscan
+go build -o urlhawkscan
+sudo mv urlhawkscan /usr/local/bin/
 ```
 
 ### Or Install via `go install`
 ```bash
-go install github.com/DhanushNehru/urlhawk@latest
+go install github.com/DhanushNehru/urlhawkscan@latest
 ```
 
 ---
@@ -51,24 +51,24 @@ go install github.com/DhanushNehru/urlhawk@latest
 
 ### Scan a single URL
 ```bash
-urlhawk -u https://example.com
+urlhawkscan -u https://example.com
 ```
 
 ### Scan a list of URLs
 ```bash
-urlhawk -l urls.txt
+urlhawkscan -l urls.txt
 ```
 
 ### Adjust Concurrency (Threads)
 Speed up your scans over a huge list by increasing the thread count (default is 10).
 ```bash
-urlhawk -l urls.txt -t 50
+urlhawkscan -l urls.txt -t 50
 ```
 
 ---
 
 ## 📸 Screenshots
-*(Add a cool terminal screenshot of URLHawk running here)*
+*(Add a cool terminal screenshot of URLHawkScan running here)*
 
 ---
 
@@ -86,7 +86,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## ⚠️ Disclaimer
 
-URLHawk is created for educational and security assessment purposes only. The authors take no responsibility and are not liable for any misuse or damage caused by this tool. Only use URLHawk on authorized networks and domains.
+URLHawkScan is created for educational and security assessment purposes only. The authors take no responsibility and are not liable for any misuse or damage caused by this tool. Only use URLHawkScan on authorized networks and domains.
 
 ---
 

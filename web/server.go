@@ -37,7 +37,7 @@ func StartServer(port int) {
   \___/ |_| \_\|_____||_| |_| \__,_|  \_/ |_|       \____/  \___| |_.__/
 
 	`)
-	color.Green("[+] URLHawk Web UI Started")
+	color.Green("[+] URLHawkScan Web UI Started")
 	color.Green("[+] Open your browser to http://localhost%s", addr)
 	color.Yellow("[!] Press Ctrl+C to stop")
 
