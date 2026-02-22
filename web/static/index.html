@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="URLHawkScan - High-speed intel and vulnerability URL scanner">
+    <title>URLHawkScan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo glow">URLHawk<span class="highlight">Scan</span></h1>
+            <p class="subtitle">Next-gen lightning fast vulnerability intelligence.</p>
+        </header>
+
+        <div class="search-container glass-panel">
+            <div class="input-wrapper">
+                <i data-lucide="search" class="icon-search"></i>
+                <input type="text" id="urlInput" placeholder="Enter a target URL (e.g. example.com)" autocomplete="off">
+            </div>
+            <button id="scanBtn" class="btn-scan">
+                <span class="btn-text">Initiate Scan</span>
+                <i data-lucide="zap" class="icon-zap"></i>
+            </button>
+        </div>
+
+        <div id="loading" class="loading-state hidden">
+            <div class="spinner"></div>
+            <p>Gathering Intelligence <span class="dots">...</span></p>
+        </div>
+
+        <div id="results" class="results-grid hidden">
+
+            <div class="card glass-panel dns-card">
+                <div class="card-header">
+                    <i data-lucide="globe" class="card-icon blue"></i>
+                    <h2>Target Overview</h2>
+                </div>
+                <div class="card-body" id="overview-content">
+                    <p class="data-label">URL Scanned:</p>
+                    <p class="data-value highlight" id="res-url">-</p>
+                </div>
+            </div>
+
+            <div class="card glass-panel headers-card">
+                <div class="card-header">
+                    <i data-lucide="shield-alert" class="card-icon yellow"></i>
+                    <h2>Security Headers</h2>
+                </div>
+                <div class="card-body" id="headers-content">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="card glass-panel files-card">
+                <div class="card-header">
+                    <i data-lucide="file-warning" class="card-icon red"></i>
+                    <h2>Exposed Sensitive Files</h2>
+                </div>
+                <div class="card-body" id="files-content">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <p>Powered by <a href="https://github.com/DhanushNehru/urlhawk" target="_blank" class="glow-link">URLHawk API</a></p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

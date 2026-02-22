@@ -7,7 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/DhanushNehru/urlhawk/scanner"
+	"github.com/DhanushNehru/urlhawkscan/scanner"
+	"github.com/DhanushNehru/urlhawkscan/web"
 	"github.com/fatih/color"
 )
 
@@ -29,8 +30,15 @@ func main() {
 	urlFlag := flag.String("u", "", "Single URL to scan")
 	listFlag := flag.String("l", "", "File containing list of URLs to scan")
 	threadsFlag := flag.Int("t", 10, "Number of concurrent threads")
+	webFlag := flag.Bool("web", false, "Start the URLHawk web interface")
+	portFlag := flag.Int("p", 8080, "Port for the web server (default 8080)")
 
 	flag.Parse()
+
+	if *webFlag {
+		web.StartServer(*portFlag)
+		return
+	}
 
 	printBanner()
 
@@ -58,9 +66,10 @@ func main() {
 		}
 	} else {
 		// Provide a default simple example
-		color.Yellow("[-] No URLs provided. Provide either -u or -l")
-		fmt.Println("Example: ./urlhawk -u example.com")
-		fmt.Println("Example: ./urlhawk -l urls.txt -t 50")
+		color.Yellow("[-] No URLs provided. Provide either -u, -l, or -web")
+		fmt.Println("Example CLI: ./urlhawkscan -u example.com")
+		fmt.Println("Example CLI: ./urlhawkscan -l urls.txt -t 50")
+		fmt.Println("Example Web: ./urlhawkscan -web -p 8080")
 		os.Exit(1)
 	}
 

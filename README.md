@@ -68,7 +68,7 @@ urlhawk -l urls.txt -t 50
 ---
 
 ## 📸 Screenshots
-<img width="734" height="291" alt="Screenshot 2026-02-21 at 7 37 12 PM" src="https://github.com/user-attachments/assets/b2910590-a51b-4832-9686-bebf6077aace" />
+*(Add a cool terminal screenshot of URLHawk running here)*
 
 ---
 
