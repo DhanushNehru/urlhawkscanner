@@ -65,12 +65,7 @@ Speed up your scans over a huge list by increasing the thread count (default is 
 urlhawkscanner -l urls.txt -t 50
 ```
 
----
 
-## 📸 Screenshots
-*(Add a cool terminal screenshot of URL Hawk Scanner running here)*
-
----
 
 ## 🤝 Contributing
 
