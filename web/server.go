@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/DhanushNehru/urlhawkscan/scanner"
+	"github.com/DhanushNehru/urlhawkscanner/scanner"
 	"github.com/fatih/color"
 )
 
-//go:embed static/*
+//go:embed public/*
 var staticFiles embed.FS
 
 func StartServer(port int) {
 	// Serve static files from the embedded filesystem
-	staticFS, err := fs.Sub(staticFiles, "static")
+	staticFS, err := fs.Sub(staticFiles, "public")
 	if err != nil {
 		color.Red("[-] Error loading embedded static files: %v", err)
 		return
@@ -37,7 +37,7 @@ func StartServer(port int) {
   \___/ |_| \_\|_____||_| |_| \__,_|  \_/ |_|       \____/  \___| |_.__/
 
 	`)
-	color.Green("[+] URLHawkScan Web UI Started")
+	color.Green("[+] URLHawkScanner Web UI Started")
 	color.Green("[+] Open your browser to http://localhost%s", addr)
 	color.Yellow("[!] Press Ctrl+C to stop")
 

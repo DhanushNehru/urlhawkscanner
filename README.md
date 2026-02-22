@@ -1,5 +1,5 @@
 <h1 align="center">
-  URL Hawk Scan 🦅
+  URL Hawk Scanner 🦅
 </h1>
 
 <p align="center">
@@ -7,14 +7,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DhanushNehru/urlhawkscan/releases"><img src="https://img.shields.io/github/v/release/DhanushNehru/urlhawkscan" alt="Release"></a>
-  <a href="https://github.com/DhanushNehru/urlhawkscan/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DhanushNehru/urlhawkscan" alt="License"></a>
+  <a href="https://github.com/DhanushNehru/urlhawkscanner/releases"><img src="https://img.shields.io/github/v/release/DhanushNehru/urlhawkscanner" alt="Release"></a>
+  <a href="https://github.com/DhanushNehru/urlhawkscanner/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DhanushNehru/urlhawkscanner" alt="License"></a>
   <a href="https://golang.org"><img src="https://img.shields.io/badge/Made%20with-Go-1f425f.svg" alt="Made with Go"></a>
 </p>
 
 ## Overview
 
-**URL Hawk Scan** is designed to quickly identify low-hanging fruit and common misconfigurations across large lists of URLs or single targets. It is built for speed and simplicity.
+**URL Hawk Scanner** is designed to quickly identify low-hanging fruit and common misconfigurations across large lists of URLs or single targets. It is built for speed and simplicity.
 
 It currently checks for:
 - Missing Security Headers (`X-Frame-Options`, `Content-Security-Policy`, `Strict-Transport-Security`).
@@ -34,15 +34,15 @@ Ensure you have [Go](https://go.dev/dl/) installed on your system.
 
 ### Build From Source
 ```bash
-git clone https://github.com/DhanushNehru/urlhawkscan.git
-cd urlhawkscan
-go build -o urlhawkscan
-sudo mv urlhawkscan /usr/local/bin/
+git clone https://github.com/DhanushNehru/urlhawkscanner.git
+cd urlhawkscanner
+go build -o urlhawkscanner
+sudo mv urlhawkscanner /usr/local/bin/
 ```
 
 ### Or Install via `go install`
 ```bash
-go install github.com/DhanushNehru/urlhawkscan@latest
+go install github.com/DhanushNehru/urlhawkscanner@latest
 ```
 
 ---
@@ -51,24 +51,24 @@ go install github.com/DhanushNehru/urlhawkscan@latest
 
 ### Scan a single URL
 ```bash
-urlhawkscan -u https://example.com
+urlhawkscanner -u https://example.com
 ```
 
 ### Scan a list of URLs
 ```bash
-urlhawkscan -l urls.txt
+urlhawkscanner -l urls.txt
 ```
 
 ### Adjust Concurrency (Threads)
 Speed up your scans over a huge list by increasing the thread count (default is 10).
 ```bash
-urlhawkscan -l urls.txt -t 50
+urlhawkscanner -l urls.txt -t 50
 ```
 
 ---
 
 ## 📸 Screenshots
-*(Add a cool terminal screenshot of URL Hawk Scan running here)*
+*(Add a cool terminal screenshot of URL Hawk Scanner running here)*
 
 ---
 
@@ -86,7 +86,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## ⚠️ Disclaimer
 
-URL Hawk Scan is created for educational and security assessment purposes only. The authors take no responsibility and are not liable for any misuse or damage caused by this tool. Only use URL Hawk Scan on authorized networks and domains.
+URL Hawk Scanner is created for educational and security assessment purposes only. The authors take no responsibility and are not liable for any misuse or damage caused by this tool. Only use URL Hawk Scanner on authorized networks and domains.
 
 ---
 

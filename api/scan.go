@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/DhanushNehru/urlhawkscan/scanner"
+	"github.com/DhanushNehru/urlhawkscanner/scanner"
 )
 
 // Handler is the entrypoint for Vercel Serverless Functions

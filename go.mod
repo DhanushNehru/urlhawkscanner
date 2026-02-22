@@ -1,4 +1,4 @@
-module github.com/DhanushNehru/urlhawkscan
+module github.com/DhanushNehru/urlhawkscanner
 
 go 1.24.3
 

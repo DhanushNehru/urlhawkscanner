@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/DhanushNehru/urlhawkscan/scanner"
-	"github.com/DhanushNehru/urlhawkscan/web"
+	"github.com/DhanushNehru/urlhawkscanner/scanner"
+	"github.com/DhanushNehru/urlhawkscanner/web"
 	"github.com/fatih/color"
 )
 
@@ -67,9 +67,9 @@ func main() {
 	} else {
 		// Provide a default simple example
 		color.Yellow("[-] No URLs provided. Provide either -u, -l, or -web")
-		fmt.Println("Example CLI: ./urlhawkscan -u example.com")
-		fmt.Println("Example CLI: ./urlhawkscan -l urls.txt -t 50")
-		fmt.Println("Example Web: ./urlhawkscan -web -p 8080")
+		fmt.Println("Example CLI: ./urlhawkscanner -u example.com")
+		fmt.Println("Example CLI: ./urlhawkscanner -l urls.txt -t 50")
+		fmt.Println("Example Web: ./urlhawkscanner -web -p 8080")
 		os.Exit(1)
 	}
 

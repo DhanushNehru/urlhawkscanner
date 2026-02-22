@@ -66,7 +66,7 @@ func apiCheckHeaders(url string) []string {
 	if err != nil {
 		return missing
 	}
-	req.Header.Set("User-Agent", "URLHawkScan-Scanner/1.0")
+	req.Header.Set("User-Agent", "URLHawkScanner-Scanner/1.0")
 
 	resp, err := apiClient.Do(req)
 	if err != nil {
@@ -102,7 +102,7 @@ func apiCheckSensitiveFiles(baseURL string) []string {
 			if err != nil {
 				return
 			}
-			req.Header.Set("User-Agent", "URLHawkScan-Scanner/1.0")
+			req.Header.Set("User-Agent", "URLHawkScanner-Scanner/1.0")
 
 			resp, err := apiClient.Do(req)
 			if err != nil {
