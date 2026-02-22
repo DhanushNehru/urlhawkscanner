@@ -38,39 +38,30 @@
             <p>Gathering Intelligence <span class="dots">...</span></p>
         </div>
 
-        <div id="results" class="results-grid hidden">
+        <div id="results" class="hud-container hidden">
+            <!-- Left Sidebar Navigation -->
+            <aside class="hud-sidebar glass-panel" id="sidebar-nav">
+                <div class="sidebar-header">
+                    <h2>Intelligence Modules</h2>
+                </div>
+                <ul class="nav-list" id="nav-list">
+                    <!-- Nav items populated by JS -->
+                </ul>
+            </aside>
 
-            <div class="card glass-panel dns-card">
-                <div class="card-header">
-                    <i data-lucide="globe" class="card-icon blue"></i>
-                    <h2>Target Overview</h2>
+            <!-- Right Content Viewer -->
+            <section class="hud-content glass-panel">
+                <div class="content-header" id="content-header">
+                    <i data-lucide="globe" class="card-icon blue" id="content-icon"></i>
+                    <h2 id="content-title">Waiting for module selection...</h2>
                 </div>
-                <div class="card-body" id="overview-content">
-                    <p class="data-label">URL Scanned:</p>
-                    <p class="data-value highlight" id="res-url">-</p>
+                <div class="content-body" id="content-body">
+                    <div class="empty-state">
+                        <i data-lucide="mouse-pointer-click"></i>
+                        <p>Select an OSINT module from the sidebar to view detailed intelligence.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card glass-panel headers-card">
-                <div class="card-header">
-                    <i data-lucide="shield-alert" class="card-icon yellow"></i>
-                    <h2>Security Headers</h2>
-                </div>
-                <div class="card-body" id="headers-content">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-
-            <div class="card glass-panel files-card">
-                <div class="card-header">
-                    <i data-lucide="file-warning" class="card-icon red"></i>
-                    <h2>Exposed Sensitive Files</h2>
-                </div>
-                <div class="card-body" id="files-content">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-
+            </section>
         </div>
 
         <footer class="footer">

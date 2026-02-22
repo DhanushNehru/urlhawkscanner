@@ -16,6 +16,14 @@
 
 **URL Hawk Scanner** is designed to quickly identify low-hanging fruit and common misconfigurations across large lists of URLs or single targets. It is built for speed and simplicity.
 
+It features an **extensible, Go-native pluggable architecture**, running 10+ concurrent OSINT checks including:
+- DNS Records (A, MX, NS, TXT)
+- WHOIS & Domain Registration
+- Quick Port Scanning
+- Security Headers & Sensitive Files
+- SSL Certificate Details & Geolocation
+- And much more...
+
 ## ⚡ Features
 - **Extremely Fast:** Uses Go concurrency routines (Goroutines) to scan massive lists of URLs asynchronously.
 - **Colorized Output:** Easily distinguish between info, warnings, and critical findings with `fatih/color`.

@@ -89,7 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
             'whois_info': { icon: 'book', color: 'yellow', title: 'WHOIS Registration' },
             'open_ports': { icon: 'radio-tower', color: 'red', title: 'Open Ports' },
             'tech_stack': { icon: 'cpu', color: 'blue', title: 'Technology Stack' },
-            'robots_txt': { icon: 'bot', color: 'yellow', title: 'Robots.txt Paths' }
+            'robots_txt': { icon: 'bot', color: 'yellow', title: 'Robots.txt Paths' },
+            'geolocation': { icon: 'map-pin', color: 'blue', title: 'Geolocation' },
+            'ssl_certificate': { icon: 'lock', color: 'green', title: 'SSL Certificate' },
+            'security_txt': { icon: 'file-lock', color: 'yellow', title: 'Security.txt Policy' },
+            'http_methods': { icon: 'arrow-right-left', color: 'blue', title: 'HTTP Methods' },
+            'wayback_machine': { icon: 'history', color: 'blue', title: 'Wayback Archive' },
+            'social_links': { icon: 'share-2', color: 'blue', title: 'Social Links' }
         };
         return rules[key] || { icon: 'server', color: 'pink', title: formatKeyAsTitle(key) };
     }
@@ -144,8 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
                 li.classList.add('active');
 
+                // Force a clean state from the global object instead of closure
+                const freshData = currentScanData[key];
+
                 // Render content pane
-                renderContentPane(key, val, meta, statusColor);
+                renderContentPane(key, freshData, meta, statusColor);
             });
 
             navList.appendChild(li);
@@ -168,10 +177,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderContentPane(key, data, meta, statusColor) {
+        // Clear immediately to prevent old content from flashing
+        contentBody.innerHTML = '';
+
         // Force a DOM reflow for the CSS animation to re-trigger
         contentBody.style.animation = 'none';
         contentBody.offsetHeight; /* trigger reflow */
-        contentBody.style.animation = null;
+        contentBody.style.animation = 'fadeIn 0.4s ease forwards';
 
         // Update Header
         contentIcon.setAttribute('data-lucide', meta.icon);
