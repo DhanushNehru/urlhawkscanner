@@ -16,10 +16,6 @@
 
 **URL Hawk Scanner** is designed to quickly identify low-hanging fruit and common misconfigurations across large lists of URLs or single targets. It is built for speed and simplicity.
 
-It currently checks for:
-- Missing Security Headers (`X-Frame-Options`, `Content-Security-Policy`, `Strict-Transport-Security`).
-- Exposed Sensitive Files (`.env`, `.git/config`, `docker-compose.yml`, `backup.sql`).
-
 ## ⚡ Features
 - **Extremely Fast:** Uses Go concurrency routines (Goroutines) to scan massive lists of URLs asynchronously.
 - **Colorized Output:** Easily distinguish between info, warnings, and critical findings with `fatih/color`.
