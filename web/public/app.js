@@ -120,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'ip_info': { icon: 'globe', color: 'indigo', title: 'IP Address Details' },
         'traceroute': { icon: 'route', color: 'orange', title: 'Network Traceroute' },
         'server_status': { icon: 'activity', color: 'cyan', title: 'Server Status & Uptime' },
-        'carbon_footprint': { icon: 'leaf', color: 'green', title: 'Carbon Footprint Analysis' }
+        'carbon_footprint': { icon: 'leaf', color: 'green', title: 'Carbon Footprint Analysis' },
+        'redirects': { icon: 'corner-down-right', color: 'purple', title: 'HTTP Redirects' }
         };
         return rules[key] || { icon: 'server', color: 'pink', title: formatKeyAsTitle(key) };
     }
