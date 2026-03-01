@@ -114,7 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Coming Soon (Viral Features)
         'ai_risk_summary': { icon: 'brain', color: 'pink', title: 'AI Risk Summary ⭐' },
         'osint_graph': { icon: 'git-graph', color: 'purple', title: 'Attack Surface Graph 🚀' },
-        'monitoring': { icon: 'bell', color: 'yellow', title: 'Real-Time Monitoring' }
+        'monitoring': { icon: 'bell', color: 'yellow', title: 'Real-Time Monitoring' },
+        // Network Analysis
+        'dns_server': { icon: 'server', color: 'teal', title: 'DNS Server Info' },
+        'ip_info': { icon: 'globe', color: 'indigo', title: 'IP Address Details' },
+        'traceroute': { icon: 'route', color: 'orange', title: 'Network Traceroute' },
+        'server_status': { icon: 'activity', color: 'cyan', title: 'Server Status & Uptime' },
+        'carbon_footprint': { icon: 'leaf', color: 'green', title: 'Carbon Footprint Analysis' }
         };
         return rules[key] || { icon: 'server', color: 'pink', title: formatKeyAsTitle(key) };
     }
