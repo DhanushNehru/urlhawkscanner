@@ -96,6 +96,25 @@ document.addEventListener('DOMContentLoaded', () => {
             'http_methods': { icon: 'arrow-right-left', color: 'blue', title: 'HTTP Methods' },
             'wayback_machine': { icon: 'history', color: 'blue', title: 'Wayback Archive' },
             'social_links': { icon: 'share-2', color: 'blue', title: 'Social Links' }
+            ,
+        // Additional OSINT & Reconnaissance Features
+        'subdomain_enum': { icon: 'git-branch', color: 'purple', title: 'Subdomain Discovery' },
+        'historical_urls': { icon: 'archive', color: 'yellow', title: 'Historical URLs & Archives' },
+        'leaked_credentials': { icon: 'user-x', color: 'red', title: 'Leaked Credentials Check' },
+        'api_endpoints': { icon: 'webhook', color: 'blue', title: 'API Endpoint Discovery' },
+        // Security & Compliance
+        'cors_policy': { icon: 'shield-question', color: 'yellow', title: 'CORS Policy Analysis' },
+        'cookie_security': { icon: 'cookie', color: 'yellow', title: 'Cookie Security' },
+        'tls_cipher_suites': { icon: 'key', color: 'green', title: 'TLS Cipher Suites' },
+        'content_security': { icon: 'shield-check', color: 'green', title: 'Content Security Policy' },
+        // Technology Detection
+        'cms_plugins': { icon: 'plug', color: 'blue', title: 'CMS & Plugins' },
+        'js_libraries': { icon: 'package', color: 'blue', title: 'JavaScript Libraries' },
+        'server_info': { icon: 'server', color: 'blue', title: 'Server Information' },
+        // Coming Soon (Viral Features)
+        'ai_risk_summary': { icon: 'brain', color: 'pink', title: 'AI Risk Summary ⭐' },
+        'osint_graph': { icon: 'git-graph', color: 'purple', title: 'Attack Surface Graph 🚀' },
+        'monitoring': { icon: 'bell', color: 'yellow', title: 'Real-Time Monitoring' }
         };
         return rules[key] || { icon: 'server', color: 'pink', title: formatKeyAsTitle(key) };
     }
